@@ -1,0 +1,32 @@
+# Claude Code: setările personale și starea locală a hook-urilor
+.claude/settings.local.json
+.claude/.state/
+
+# Secrete
+.env
+.env.*
+!.env.example
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/captures/
+*.apk
+*.aab
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Sistem
+.DS_Store
+Thumbs.db

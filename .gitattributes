@@ -1,0 +1,12 @@
+# Jurnalul: la merge se păstrează intrările ambelor părți, fără conflicte.
+docs/LOG.md merge=union
+# Legenda e generată: la merge nu dă conflict, iar următoarea sesiune o regenerează curat.
+docs/LEGENDA.md merge=union
+
+# Scripturile bash trebuie să aibă LF, altfel nu rulează (Windows le salvează cu CRLF).
+*.sh text eol=lf
+
+# Fișiere binare
+*.glb binary
+*.xlsx binary
+*.png binary
