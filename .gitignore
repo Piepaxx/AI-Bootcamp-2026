@@ -14,8 +14,16 @@ android/app/build/
 android/local.properties
 android/.idea/
 android/captures/
+android/.kotlin/
 *.apk
 *.aab
+# Cheile de semnare nu intră niciodată în git
+*.jks
+*.keystore
+
+# Editoare
+.idea/
+.vscode/
 
 # Python
 __pycache__/

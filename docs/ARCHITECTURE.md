@@ -13,6 +13,7 @@ ConcursTOP/
 ├── docs/
 │   ├── LOG.md                jurnalul echipei (ora · autor · ce s-a făcut · ce a rămas)
 │   ├── ARCHITECTURE.md       acest fișier
+│   ├── PLAN.md               cine ce face și când (oameni, laptopuri, calendar până la demo)
 │   └── LEGENDA.md            ce face fiecare hook și skill (GENERAT automat, nu se editează)
 ├── .claude/
 │   ├── settings.json         hook-uri comune (în git)
@@ -53,7 +54,7 @@ Scanare GLB ──► glb_to_plan2d.py ──► plan_2d.json ──► Supabase
 | Tema și componentele Compose din `android/` | 4. Design UX/UI |
 | `data/`, `pitch/` | 5. Date, teste, pitch |
 
-Numele oamenilor pe roluri: se completează aici când se știu.
+Pentru concurs, repartizarea pe oameni (4–5 oameni, 3 laptopuri) și granițele exacte pe foldere sunt în `docs/PLAN.md`.
 
 ## Primii pași pentru un coleg nou
 

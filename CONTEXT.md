@@ -21,11 +21,14 @@
 
 | Element | Detalii |
 |---|---|
-| Eveniment | UPT **AI Prototyping Bootcamp**, 20–22 noiembrie 2026, Biblioteca UPT (etajul 4). Format: ~40 h, la final demo + pitch în fața juriului. |
+| Eveniment | UPT **AI Prototyping Bootcamp**, 20–22 noiembrie 2026, Biblioteca UPT (Bd. Vasile Pârvan 2, etajul 4). Ghidul oficial: [Notion](https://app.notion.com/p/AI-Prototyping-Bootcamp-ghidul-participantului-41a5521e5f34812687f6db7262c4f0b0) · [pagina UPT](https://www.upt.ro/evenimente/ai-prototyping-bootcamp). Noutățile apar în grupul de WhatsApp al participanților. |
+| Program (din ghid) | **Vineri 20:** 16:00–20:00 (tema, echipele, ideea pe un slide, discovery). **Sâmbătă 21:** 10:00–19:15. 10:00 intro „Building Prototypes For Learning, not Looks”, lucru în echipă, **16:00–18:00 mentorat**, 18:30 intro „Preparing Your Presentation”. Prânz 13:00, cină 18:00. **Duminică 22:** 10:00 lucru în echipă, **12:00 repetiții**, prânz 13:00. |
+| Finala | **Duminică 15:00.** Etapa 1 (15:00–15:55): **pitch de 3 minute**. Etapa 2 (15:55–16:55): **interviu 1-la-1 cu juriul, 4 minute pe echipă**. 17:10: câștigătorii. |
 | Ce punctează juriul | **Prototipul + rezultatele testelor cu potențiali utilizatori + pașii următori**. Premii: 3.000 EUR în total. |
-| Unelte | Claude Code + Claude Design |
+| Unelte | Claude Code + Claude Design. Ghidul recomandă un tool desktop/CLI în locul variantei din browser. Pe Windows, modul Code din Claude are nevoie de **Git**. Recomandă și GitHub (codul echipei), Google Drive (fișierele echipei), Wispr Flow (dictare). |
+| Abonament | Claude Pro pe o lună (20 USD + TVA), cumpărat din contul propriu. **Păstrați factura** și trimiteți-o după eveniment organizatorilor (adresa e în ghid). Suma se returnează ca bursă. |
 | După concurs | Pre-Accelerator UPT, din martie 2027 |
-| Echipă | 5 oameni (vezi §11) |
+| Echipă | 4 oameni, posibil 5, cu **3 laptopuri** (vezi §11 și `docs/PLAN.md`) |
 | Risc de regulament | Organizatorii anunță o temă. Confirmați că ideea se încadrează în ea. **DE VALIDAT** |
 
 Consecință pentru prioritizare: **validarea cu studenți reali cântărește cât construcția**. Fiecare funcționalitate P0 trebuie să poată fi testată de un student din anul I în mai puțin de 2 minute.
@@ -356,7 +359,9 @@ Exemplu de intrare reală (`An 1`, celula combinată `H33:H34`):
 
 ## 11. Echipa și fazele
 
-### Roluri (5 oameni)
+### Roluri (5 roluri)
+> Echipa reală are 4–5 oameni și doar 3 laptopuri. Cum se împart rolurile de mai jos pe oameni, pentru concurs: `docs/PLAN.md`.
+
 | # | Rol | Responsabilitate |
 |---|---|---|
 | 1 | **Android: aplicație principală** | Arhitectură, date, offline, hartă 2D, orar, căutare, integrare; responsabil de ramura principală a aplicației |
@@ -376,7 +381,10 @@ Exemplu de intrare reală (`An 1`, celula combinată `H33:H34`):
 
 ## 12. Scenariul de demo și validarea
 
-### Demo (~3 minute)
+### Demo (în pitch-ul de 3 minute)
+> Formatul finalei (din ghid): **pitch de 3 minute în total**, apoi **interviu de 4 minute** cu juriul. Demo-ul live trebuie să încapă în **~60–90 s** din pitch, alături de problemă, rezultatele testelor și pașii următori. Pentru interviu pregătiți: cifrele din teste, ce ați învățat, riscurile (§13) și roadmap-ul (§14). Aici se poate arăta și restul demo-ului.
+
+Ordinea completă, pentru interviu sau pentru video. În pitch intră doar pașii 2–5, scurtați:
 1. Adminul încarcă Excel-ul oficial. AI-ul îl transformă în orar, adminul corectează un rând și publică.
 2. Studentul (anul I, Seria 1, 1.2) deschide aplicația și vede „Următorul curs”.
 3. Scanează codul QR de la intrarea pe etaj; harta arată „Ești aici”.

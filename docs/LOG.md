@@ -8,8 +8,29 @@ Ce s-a făcut, ce s-a decis, ce a rămas. Fiecare sesiune de lucru (din orice co
 
 <!-- INTRĂRI NOI AICI: cele mai noi primele -->
 
-## 2026-11-21 09:40 · Stefanita
-**Rol:** organizare echipă (unelte Claude Code)
+## 2026-11-21 09:42 · Stefanita · sesiune 605d566a
+**Rol:** organizare echipă (review structură + plan)
+**Ce am făcut:**
+- Review la structura proiectului (documente, hook-uri, scripturi, skill-uri, date). Structura de lucru în echipă e solidă; problemele găsite sunt la „Ce a rămas”.
+- `docs/PLAN.md`: cine ce face pentru 4–5 oameni cu 3 laptopuri (A Android, B hartă+traseu+QR, C backend+admin, D teren+design+teste, E pitch), granițele pe foldere, calendarul până la demo, rotația laptopurilor, ce tăiem.
+- `CONTEXT.md` §2 și §11: echipa reală (4–5 oameni, 3 laptopuri), cu trimitere la `PLAN.md`. `ARCHITECTURE.md`: `PLAN.md` în structură.
+- `.gitignore`: `*.jks`, `*.keystore`, `.idea/`, `.vscode/`, `android/.kotlin/`.
+
+**Decizii:**
+- Propuse în `PLAN.md`, de confirmat la ședința de la 10:00: Wi-Fi și AR tăiate pentru concurs; App Links amânat (QR scanat din aplicație); calendarul academic scris direct în seed; aplicația pornește din `seed.json` din assets.
+
+**Ce a rămas:**
+- [ ] **Numele aplicației:** `CLAUDE.md` și skill-ul `coridor-ui` spun „Coridor”, iar `CONTEXT.md` §1 spune „Roomly” (DECIS). De ales unul înainte ca A să creeze pachetul Android.
+- [ ] Mutat datele din rădăcină în `data/` (GLB, `plan_2d.*`, xlsx), `glb_to_plan2d.py` în `backend/tools/`, `prompt-research.md` în `docs/`, apoi actualizat `CONTEXT.md` §6.2 și §17. De făcut ACUM, înainte să cloneze colegii.
+- [ ] `glb_to_plan2d.py`: `FLOOR = -1.71` și titlul figurii sunt scrise direct în cod; lipsește un `requirements.txt` (trimesh, shapely, matplotlib, numpy).
+- [ ] Completate numele A–E în `docs/PLAN.md` §1 și ora demo-ului.
+- [ ] Verificat că repo-ul de pe GitHub e **privat** (conține scanarea interiorului clădirii, `CONTEXT.md` §13) și adăugați colegii drept colaboratori.
+- [ ] Faza 0: `data/contract.md` + `data/seed.json`.
+
+**Fișiere:** `docs/PLAN.md`, `docs/ARCHITECTURE.md`, `CONTEXT.md`, `.gitignore`, `docs/LOG.md`
+
+## 2026-11-21 09:40–09:47 · Stefanita
+**Rol:** organizare echipă (unelte Claude Code + regulile concursului)
 **Ce am făcut:**
 - `docs/LEGENDA.md`: legenda generată automat cu toate hook-urile (când rulează, pe ce, ce fac), skill-urile (cine le pornește, origine, ce fac), plugin-urile și scripturile ajutătoare.
 - Generatorul `.claude/scripts/gen-legend.sh` citește `settings.json`, comentariul de antet al scripturilor și `description` din fiecare `SKILL.md`. Scrie fișierul doar dacă s-a schimbat ceva.
@@ -19,14 +40,25 @@ Ce s-a făcut, ce s-a decis, ce a rămas. Fiecare sesiune de lucru (din orice co
   - la Stop.
 - Legenda e exclusă din amprenta hook-ului de jurnal și are `merge=union` în `.gitattributes`.
 - Convenția pentru hook-uri și skill-uri noi e trecută în `CLAUDE.md`. `/finish` regenerează legenda înainte de commit.
+- Am citit ghidul oficial al participantului (Notion) și pagina UPT. `CONTEXT.md` §2 are acum:
+  - programul pe zile;
+  - formatul finalei: duminică la 15:00, pitch de 3 min + interviu 1-la-1 de 4 min cu juriul;
+  - uneltele recomandate;
+  - returnarea abonamentului Claude Pro.
+- `CONTEXT.md` §12: demo-ul trebuie să încapă în pitch-ul de 3 min (~60–90 s). Restul se arată la interviu.
+- `docs/PLAN.md`: persoanele apar doar ca A–E, fără nume. Formulările de tipul „cine nu are nevoie de laptop” sau „are cel mai puțin cod” au devenit neutre. Fișierul e încă local, necommis.
 
 **Decizii:**
 - Legenda e fișier generat, nu se editează de mână. Textele vin din antetul scripturilor și din `description`.
 
 **Ce a rămas:**
+- [ ] **De discutat la ședință** (`docs/PLAN.md` nu l-am modificat): repetițiile oficiale încep duminică la 12:00 și finala e la 15:00. Înghețarea „cu 4 h înainte” cade deci duminică la 11:00. Testele cu studenții, planificate duminică dimineața, se suprapun cu ea. Propunere: testele sâmbătă seara.
+- [ ] Sâmbătă programul oficial se termină la 19:15. Stabiliți unde lucrați seara.
+- [ ] Fiecare membru: Claude Pro + păstrat factura pentru returnare (detalii în `CONTEXT.md` §2).
+- [ ] Tema anunțată vineri nu apare în ghid. De confirmat în `CONTEXT.md` §2 că ideea se încadrează.
 - [ ] Opțional: antetul din `kotlin-ui-check.sh` începe cu „PostToolUse (...) pe fișiere .kt” fără „:” după paranteză, așa că prefixul rămâne în legendă. E doar cosmetic.
 
-**Fișiere:** `.claude/scripts/gen-legend.sh`, `.claude/hooks/legend-update.sh`, `.claude/settings.json`, `.claude/scripts/worktree-hash.sh`, `.claude/skills/finish/SKILL.md`, `.gitattributes`, `CLAUDE.md`, `docs/ARCHITECTURE.md`, `docs/LEGENDA.md`
+**Fișiere:** `.claude/scripts/gen-legend.sh`, `.claude/hooks/legend-update.sh`, `.claude/settings.json`, `.claude/scripts/worktree-hash.sh`, `.claude/skills/finish/SKILL.md`, `.gitattributes`, `CLAUDE.md`, `CONTEXT.md`, `docs/ARCHITECTURE.md`, `docs/LEGENDA.md`
 
 ## 2026-11-21 09:35 · Stefanita · sesiune e0c3248a
 **Rol:** organizare echipă (unelte Claude Code)
