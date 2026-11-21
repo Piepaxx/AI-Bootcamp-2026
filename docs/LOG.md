@@ -8,6 +8,25 @@ Ce s-a făcut, ce s-a decis, ce a rămas. Fiecare sesiune de lucru (din orice co
 
 <!-- INTRĂRI NOI AICI: cele mai noi primele -->
 
+## 2026-11-21 12:11 · PaulIacoblev · sesiune 6f298005
+**Rol:** Localizare + 3D (prototip web)
+**Ce am făcut:**
+- Folder nou `web-3d/`: prototip web (React + react-three-fiber) care transformă `2_11_2025.glb` într-o hartă 3D minimalistă a holurilor (podea, pereți joși, vedere 3D/de sus, temă luminoasă/întunecată, merge și pe telefon).
+- `web-3d/scripts/extract-floor.mjs`: scanare → contur holuri aliniat și îndreptat → `src/map/floor.json`.
+- `web-3d/scripts/detect-doors.mjs`: detectare automată a ușilor din scanare (tocuri până la podea + buiandrug + foaie netedă). 20 de uși detectate, desenate în hartă.
+- `docs/ARCHITECTURE.md`: adăugat `web-3d/` în structură.
+
+**Decizii:**
+- Biblioteci noi, doar în `web-3d/`: three.js, @react-three/fiber, @react-three/drei, Tailwind v4, @gltf-transform/core, three-mesh-bvh, jpeg-js. Nu ating stack-ul Android DECIS.
+- Scanarea nu e duplicată: scripturile citesc `../2_11_2025.glb`. Dacă GLB-ul se mută în `data/`, trebuie actualizate căile din `web-3d/package.json`.
+
+**Ce a rămas:**
+- [ ] Trasee de la intrări la sală, pin-uri pe săli, tab-uri Orar/Examene (vezi planul din `web-3d/log.md`).
+- [ ] 2–4 uși ratate (cu afișe), iar scările sunt închise de pereți în hartă; de corectat manual.
+- [ ] De discutat cu echipa: folosim geometria (contur + uși) din `web-3d/src/map/floor.json` și în `plan_2d.json` / Android?
+
+**Fișiere:** `web-3d/**`, `docs/ARCHITECTURE.md`, `docs/LOG.md`
+
 ## 2026-11-21 09:42 · Stefanita · sesiune 605d566a
 **Rol:** organizare echipă (review structură + plan)
 **Ce am făcut:**
